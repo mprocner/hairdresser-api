@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+booking_number:
+  path: /booking/number
+  controller: App\Controller\BookingController::number
+
+authentication_token:
+  path: /authentication_token
+  methods: ['POST']
