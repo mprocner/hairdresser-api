@@ -13,7 +13,7 @@
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
 
-.idea/
+/.idea/
 
 ###> symfony/phpunit-bridge ###
 .phpunit
