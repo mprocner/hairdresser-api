@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04b71e1c-d288-4345-8e52-69819aeab0fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataPersister/BookingDataPersister.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Doctrine/CurrentUserExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Booking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200412125221.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/BookingRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Constraints/AppointmentHour.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Constraints/AppointmentHourValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Constraints/WorkingTime.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Constraints/WorkingTimeValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/BookingSaveTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/UsersListTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/RefreshDatabase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hairdresser-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hairdresser-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HairdresserPosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HairdresserPosition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Validator/Constraints/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator/Constraints/Password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Validator/Constraints/PasswordValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator/Constraints/PasswordValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +123,13 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aOQRCSz8lR7H6Ot0ui5AwYB8nP" />
@@ -141,9 +145,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../docker-compose-laravel" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Unit" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -159,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586604149364</updated>
       <workItem from="1586604150807" duration="19182000" />
-      <workItem from="1586694733994" duration="11574000" />
+      <workItem from="1586694733994" duration="25960000" />
     </task>
     <servers />
   </component>
@@ -167,23 +174,27 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1921" y="51" width="800" height="675" key="#Inspections" timestamp="1586720367951">
+      <screen x="0" y="0" width="3286" height="728" />
+    </state>
+    <state x="1921" y="51" width="800" height="675" key="#Inspections/0.0.3286.728@0.0.3286.728" timestamp="1586720367951" />
     <state x="426" y="168" width="504" height="387" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586609220757">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="426" y="168" width="504" height="387" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586609220757" />
-    <state x="1366" y="51" width="387" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1586710120966">
+    <state x="1366" y="51" width="387" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1586718452906">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="489" y="51" width="377" height="622" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586635509605" />
-    <state x="1366" y="51" width="387" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.3286.728@0.0.3286.728" timestamp="1586710120966" />
+    <state x="1366" y="51" width="387" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.3286.728@0.0.3286.728" timestamp="1586718452906" />
     <state x="1965" y="0" width="712" height="726" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586699935485">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="1965" y="0" width="712" height="726" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.3286.728@0.0.3286.728" timestamp="1586699935485" />
-    <state x="2059" y="244" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586699802276">
+    <state x="2059" y="244" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586720148380">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
-    <state x="2059" y="244" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.3286.728@0.0.3286.728" timestamp="1586699802276" />
+    <state x="2059" y="244" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.3286.728@0.0.3286.728" timestamp="1586720148380" />
     <state x="2074" y="387" width="494" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586710141843">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
@@ -192,37 +203,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="121" width="424" height="482" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586616919650" />
-    <state x="1679" y="242" width="578" height="366" key="NewPhpClassDialog" timestamp="1586709380096">
+    <state x="1679" y="242" width="578" height="366" key="NewPhpClassDialog" timestamp="1586720127091">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="427" y="179" width="571" height="366" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1586633615625" />
-    <state x="1679" y="242" width="578" height="366" key="NewPhpClassDialog/0.0.3286.728@0.0.3286.728" timestamp="1586709380096" />
+    <state x="1679" y="242" width="578" height="366" key="NewPhpClassDialog/0.0.3286.728@0.0.3286.728" timestamp="1586720127091" />
     <state x="501" y="67" width="353" height="590" key="RollbackChangesDialog" timestamp="1586695692845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="501" y="67" width="353" height="590" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586695692845" />
-    <state x="187" y="0" key="SettingsEditor" timestamp="1586633693858">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="374" y="0" key="SettingsEditor" timestamp="1586713758204">
+      <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="187" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586633693858" />
+    <state x="374" y="0" key="SettingsEditor/0.0.3286.728@0.0.3286.728" timestamp="1586713758204" />
     <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1586636615958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1586636615958" />
+    <state x="2025" y="26" width="592" height="700" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1586713782885">
+      <screen x="0" y="0" width="3286" height="728" />
+    </state>
+    <state x="2025" y="26" width="592" height="700" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.3286.728@0.0.3286.728" timestamp="1586713782885" />
     <state x="100" y="0" width="1366" height="728" maximized="true" key="dock-window-1" timestamp="1586707027529">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="100" y="0" width="1366" height="728" maximized="true" key="dock-window-1/0.0.3286.728@0.0.3286.728" timestamp="1586707027529" />
-    <state x="1608" y="167" width="1511" height="506" key="find.popup" timestamp="1586699275335">
+    <state x="1536" y="86" width="1511" height="506" key="find.popup" timestamp="1586723965886">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="369" y="110" width="628" height="506" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586633710894" />
-    <state x="1608" y="167" width="1511" height="506" key="find.popup/0.0.3286.728@0.0.3286.728" timestamp="1586699275335" />
-    <state x="832" y="49" width="1617" height="678" key="search.everywhere.popup" timestamp="1586709655181">
+    <state x="1536" y="86" width="1511" height="506" key="find.popup/0.0.3286.728@0.0.3286.728" timestamp="1586723965886" />
+    <state x="1516" y="136" width="1617" height="678" key="search.everywhere.popup" timestamp="1586722867687">
       <screen x="0" y="0" width="3286" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586638459784" />
-    <state x="832" y="49" width="1617" height="678" key="search.everywhere.popup/0.0.3286.728@0.0.3286.728" timestamp="1586709655181" />
+    <state x="1516" y="136" width="1617" height="678" key="search.everywhere.popup/0.0.3286.728@0.0.3286.728" timestamp="1586722867687" />
     <state x="408" y="277" width="540" height="169" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586639348835">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

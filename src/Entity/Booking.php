@@ -52,6 +52,7 @@ class Booking
      * @ORM\Column(type="time")
      * @WorkingTimeValidator
      * @AppointmentHourValidator
+     * @var \DateTime
      */
     private $startTime;
 
@@ -101,9 +102,9 @@ class Booking
         return $this;
     }
 
-    public function getStartTime(): ?\DateTimeInterface
+    public function getStartTime(): ?string
     {
-        return $this->startTime;
+        return $this->startTime->format('H:i');
     }
 
     public function setStartTime(\DateTimeInterface $startTime): self
@@ -113,9 +114,9 @@ class Booking
         return $this;
     }
 
-    public function getEndTime(): ?\DateTimeInterface
+    public function getEndTime(): ?string
     {
-        return $this->endTime;
+        return $this->endTime->format('H:i');
     }
 
     public function setEndTime(\DateTimeInterface $endTime): self
@@ -125,9 +126,9 @@ class Booking
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): ?string
     {
-        return $this->date;
+        return $this->date->format('Y-m-d');
     }
 
     public function setDate(\DateTimeInterface $date): self
