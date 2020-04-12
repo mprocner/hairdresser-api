@@ -16,6 +16,9 @@ class BookingController extends AbstractController
 {
     public function number()
     {
+
+        dd(preg_match($regex, '12:0012:00'));
+//        dd('%env(string:OPENING_HOUR)%');
         $number = random_int(0, 100);
         $em = $this->getDoctrine()->getManager();
         $em->getConnection()->connect();

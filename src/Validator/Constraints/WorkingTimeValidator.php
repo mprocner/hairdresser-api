@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * File: PasswordValidator.php
+ * File: StartTimeValidator.php
  *
  * @author Mateusz Procner<mateusz.procner@gmail.com>
  * @copyright Copyright (C) 2020 Mateusz Procner
@@ -13,18 +13,24 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
 /**
- * Class PasswordValidator
+ * Class WorkingTimeValidator
  * @package App\Validator\Constraints
  */
-final class PasswordValidator extends ConstraintValidator
+final class WorkingTimeValidator extends ConstraintValidator
 {
     /**
      * @param mixed $value
      * @param Constraint $constraint
+
      */
     public function validate($value, Constraint $constraint): void
     {
-        if (!is_string($value) || (strlen($value) < 8) ) {
+        $openingTime = strtotime($_ENV['OPENING_HOUR']);
+        $closingTime = strtotime($_ENV['CLOSING_HOUR']);
+
+        /** @var $value \DateTime */
+        $bookingTime = strtotime($value->format('H:i'));
+        if ($bookingTime < $openingTime || $bookingTime > $closingTime ) {
             $this->context->buildViolation($constraint->message)->addViolation();
         }
     }

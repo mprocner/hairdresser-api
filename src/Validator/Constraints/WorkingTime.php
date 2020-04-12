@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * File: Password.php
+ * File: StartTime.php
  *
  * @author Mateusz Procner<mateusz.procner@gmail.com>
  * @copyright Copyright (C) 2020 Mateusz Procner
@@ -12,12 +12,14 @@ namespace App\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
+ * Class StartTime
  * @Annotation
+ * @package App\Validator\Constraints
  */
-class Password extends Constraint
+class WorkingTime extends Constraint
 {
     /**
      * @var string
      */
-    public $message = 'Your password is too short (minimum 8 characters)';
+    public $message = 'Time should be after opening hour and before closing hour';
 }

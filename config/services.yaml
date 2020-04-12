@@ -31,3 +31,8 @@ services:
         autoconfigure: false
 
     App\DataPersister\UserDataPersister: ~
+
+    App\Doctrine\CurrentUserExtension:
+        tags:
+            - { name: api_platform.doctrine.orm.query_extension.collection }
+            - { name: api_platform.doctrine.orm.query_extension.item }
