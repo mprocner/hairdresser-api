@@ -4,6 +4,8 @@ Zadanie wykonane przy użyciu api-platform i Symfony Flex
 
 # Uruchomienie
 
+## Pobranie repozytorium
+* W celu pobrania repozytorium należy uruchomić polecenie `git clone git@github.com:mprocner/hairdresser-api.git`
 ## Docker
 * Do zadania zostało dodane środowisko uruchomieniowe w docker-compose.\
 W celu uruchomienia należy z konsoli uruchomić polecenie \
