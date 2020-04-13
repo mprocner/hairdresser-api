@@ -58,15 +58,21 @@ class FeatureTestCase extends ApiTestCase
     private function truncateEntities(array $entities)
     {
         $connection = $this->entityManager->getConnection();
+        $schemaManager = $connection->getSchemaManager();
+
         $databasePlatform = $connection->getDatabasePlatform();
+        $schemaManager = $connection->getSchemaManager();
+
         if ($databasePlatform->supportsForeignKeyConstraints()) {
             $connection->query('SET FOREIGN_KEY_CHECKS=0');
         }
         foreach ($entities as $entity) {
-            $query = $databasePlatform->getTruncateTableSQL(
-                $this->entityManager->getClassMetadata($entity)->getTableName()
-            );
-            $connection->executeUpdate($query);
+            $tableName = $this->entityManager->getClassMetadata($entity)->getTableName();
+            $currentTables = $schemaManager->listTableNames();
+            if(in_array($tableName, $currentTables)) {
+                $query = $databasePlatform->getTruncateTableSQL($tableName);
+                $connection->executeUpdate($query);
+            }
         }
         if ($databasePlatform->supportsForeignKeyConstraints()) {
             $connection->query('SET FOREIGN_KEY_CHECKS=1');
