@@ -21,4 +21,5 @@ class UserTest extends TestCase
 
         $this->assertSame('mateusz.procner@gmail.com', $user->getEmail());
     }
+
 }

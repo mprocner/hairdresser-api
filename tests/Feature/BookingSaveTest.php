@@ -57,7 +57,6 @@ class BookingSaveTest extends FeatureTestCase
         $this->assertResponseHeaderSame('content-type', 'application/ld+json; charset=utf-8');
         $booking = $this->entityManager->getRepository(Booking::class)->find(1);
         $this->assertInstanceOf(Booking::class, $booking);
-//        dd($booking->getStartTime());
-//        $this->assertEquals('12:00', $booking->getStartTime()->format('h:i'));
+        $this->assertEquals('12:00', $booking->getStartTime());
     }
 }

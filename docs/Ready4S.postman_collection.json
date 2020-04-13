@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "9a08688c-5664-4155-80ef-0bf02cb00230",
+		"name": "Ready4S",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users list",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/hairdresser_positions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"hairdresser_positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"mateusz.procner+5@gmail.com\",\n\t\"password\": \"asdqw1234e\",\n\t\"roles\": [\n                \"ROLE_USER\"\n            ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "Content",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hairdresser positions list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/hairdresser_positions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"hairdresser_positions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hairdresser position get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/hairdresser_positions/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"hairdresser_positions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hairdresserPosition\": \"/api/hairdresser_positions/1\",\n\t\"startTime\": \"08:00\",\n\t\"endTime\": \"09:00\",\n\t\"date\": \"12.05.2020\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservations list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get JWT token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"mateusz.procner@gmail.com\",\n\t\"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/authentication_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"authentication_token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "47a5bd82-e755-4a52-a46b-3e0b36631ea5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "be4c74ab-6262-411e-a590-016017f80e97",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1604c2d0-a0e9-4201-95b5-14ce55e90107",
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1ODY3MjYzNTcsImV4cCI6MTU4NjcyOTk1Nywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibWF0ZXVzei5wcm9jbmVyQGdtYWlsLmNvbSJ9.hTAOGaPWwW6TDC4CaAf3gTECCW6A2ugX1yRKcZDwPTPG08qGtyA4Cd-RsVm_FnBtaYr6OkT_UFGfGTMe8Fs0hI6_auu7zzluEGpm-9Rf1KBJdYMWosw52UvsqO-Z9hsJ_B3-TKl-xha91EqB00qm48NkApfzINE-Pq0uO3fBikFpeRSsbJrSWXv54_RTpb63QhzwABRILPF_afpeXQSlB82OkxH2xIG44LxvHDWfd5OI0rqkCf2EBoFle88_NHUtlvY-ufzNTXSXBgcfLM8eBouKYznaoamwF2i1Qgdq1ozMMPpLjWcvEXWwwEWjMcyaL_C59aTRWQk73S1Gj7nzrbYdOlaWN15GgPSGx_VUHc9xsTE8BblNBbz7FCuZj7qZfMxsdgVBTfb6AQX2xxXDzKH0whVFWwQ6mL3bQALTActe27C6QmhOUjyNrDyXHanRZThevy6aO68wwDlswAkg4An2VfKEr75HLR4IPXzZPhNvk05X8gw9MRg5TW5E_QZ3BXoS48bUN2euWAf3IN3kqNVLuD1LHULi4Ck4tO8CZlHSQkTVLguJPqMNCGsf3mOqwlm_ji8wL9hmo655IE4zE3ntyq3Ls5rWnwSRsJL4i1OuY6twIxUT-0yU1Znslb4XP7V_ATObIt73cvRbE3sSiLXZFkErhHrc1Vl9V3w831o",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

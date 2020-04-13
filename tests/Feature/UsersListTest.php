@@ -17,8 +17,6 @@ use App\Tests\RefreshDatabase;
  */
 class UsersListTest extends FeatureTestCase
 {
-    use RefreshDatabase;
-
     /**
      * @var \Doctrine\ORM\EntityManager
      */
