@@ -27,6 +27,20 @@ W celu uruchomienia należy z konsoli uruchomić polecenie \
 ### Testowa baza danych
 Do testów jest uzywana inna baza danych, która jest czyszczona przed każdym uruchomieniem testu funkcjonalności.
 
+## Generowanie kluczy JWT
+Dokumentacja: (https://api-platform.com/docs/core/jwt/#installing-lexikjwtauthenticationbundle)
+```
+docker-compose exec php sh -c '
+    set -e
+    apk add openssl
+    mkdir -p config/jwt
+    jwt_passphrase=$(grep ''^JWT_PASSPHRASE='' .env | cut -f 2 -d ''='')
+    echo "$jwt_passphrase" | openssl genpkey -out config/jwt/private.pem -pass stdin -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
+    echo "$jwt_passphrase" | openssl pkey -in config/jwt/private.pem -passin stdin -out config/jwt/public.pem -pubout
+    setfacl -R -m u:www-data:rX -m u:"$(whoami)":rwX config/jwt
+    setfacl -dR -m u:www-data:rX -m u:"$(whoami)":rwX config/jwt
+'
+```
 # Testy
 * W folderze `tests` zostały zawarte przykładowe testy.\
 * Klasa `FeatureTestCase`, po której dziedziczą testy funkcjonalne czyści bazę danych przed kazdym uruchomieniem testu.\
