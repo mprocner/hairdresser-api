@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * File: Password.php
+ * File: AppointmentHour.php
  *
  * @author Mateusz Procner<mateusz.procner@gmail.com>
  * @copyright Copyright (C) 2020 Mateusz Procner
@@ -12,12 +12,14 @@ namespace App\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 
 /**
+ * Class AppointmentHour
  * @Annotation
+ * @package App\Validator\Constraints
  */
-class Password extends Constraint
+class AppointmentHour extends Constraint
 {
     /**
      * @var string
      */
-    public $message = 'Your password is too short (minimum 8 characters)';
+    public $message = 'You can only make an appointment at full or half hour';
 }
